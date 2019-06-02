@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<script src="/app/anu/comp2610/lz77/lz77.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#fader").delay(500).fadeOut(700);
+		});
+	</script>
+
+	</style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+	<div class="menubar" id="menubar1">
+		<h1 id="home">
+			<a onclick="go('app://',true)" id="back" class="transition">
+				<i class="icon icon-home"></i>
+			</a>
+		</h1>
+	</div>
+
+	<div id="fader" style="position:absolute; height: 100%; width: 100%; background-color: #8BC34A; z-index:200000000000">
+		<i class='icon icon-home' style='position:absolute; left: 45%; top:35%;font-size:20vh; color: white;'></i>
+	</div>
+
+	<!--<div class="pt-triggers">
+					<div id="dl-menu" class="dl-menuwrapper">
+						<a href="https://noiach.com/app/rnutjs"><button id="go" data-animation="18">Go</button></a>
+						<ul class="dl-menu">
+						</ul>
+					</div><!-- /dl-menu-wrapper--
+				</div><!-- /triggers -->
+
+	<div id="js-output" style="margin-top: 80px;margin-left: 20px;">
+		<span style="float:left;"> To code: </span>
+		<input type="text" id="myText" value="Input" style="float: left;">
+		<span style="float:left;"> Window:</span>
+		<input type="number" id="myWindow" value="4" style="float: left; width: 30px;">
+		<button onclick="lz77En()">Code!</button>
+		<br/>
+
+		<span style="float:left;"> To code: </span>
+		<input type="text" id="myText1" value="Input" style="float: left;">
+		<span style="float:left;"> Window:</span>
+		<input type="number" id="myWindow1" value="4" style="float: left; width: 30px;">
+		<button onclick="lz77De()">Code!</button>
+
+		<p id="demo"></p>
+
+	</div>
+
+	<a href="http://google.com">google</a>
+
+
+
+
+
+</body>
+
+</html>

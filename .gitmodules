@@ -1,0 +1,6 @@
+[submodule "app/rnutjs"]
+	path = app/rnutjs
+	url = https://github.com/noiach/rPeANUt-js.git
+[submodule "app/XScreenSaver.js"]
+	path = app/XScreenSaver.js
+	url = https://github.com/noiach/XScreenSaver-js.git

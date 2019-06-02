@@ -1,0 +1,271 @@
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  color: #333337;
+  background-color: #fff;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h3,
+h6 {
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+p {
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  p {
+    margin: 0 0 35px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
+div {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  -o-user-select: text;
+  user-select: text;
+}
+
+a {
+  color: #cc706c;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #9c3a36;
+}
+
+.content-section {
+  margin-top: 100px;
+  padding-top: 100px;
+}
+
+@media (min-width: 767px) {
+  .content-section {
+    margin-top: 125px;
+    padding-top: 125px;
+  }
+}
+
+.content-section ul {
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 1.5;
+  list-style-position: inside;
+}
+
+.content-section pre {
+  padding: 0;
+}
+
+.content-section pre>code {
+  text-align: left;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(204, 112, 108, 0.5);
+}
+
+::selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(204, 112, 108, 0.5);
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(204, 112, 108, 0.5);
+}
+
+#top-marginer {
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  #top-marginer {
+    margin-top: 0px;
+  }
+}
+
+#post {
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: left;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+#post ul {
+  list-style: square;
+}
+
+#post p {
+  font-size: 18px !important;
+}
+
+#pre-header {
+  margin-bottom: 10px;
+}
+
+#header-date {
+  opacity: 0.4;
+}
+
+figure.highlight pre {
+  margin: 20px 0px;
+  border-radius: 10px !important;
+  padding: 20px !important;
+  font-size: 14px !important;
+}
+
+.highlight pre {
+  background-color: rgb(40, 44, 52);
+}
+
+.highlight .c {
+  color: #75715e
+}
+
+/* Comment */
+/* Error */
+.highlight .k {
+  color: #66d9ef
+}
+
+/* Keyword */
+/* Literal */
+.highlight .n {
+  color: #f8f8f2
+}
+
+/* Name */
+.highlight .o {
+  color: #f92672
+}
+
+/* Operator */
+.highlight .p {
+  color: #f8f8f2
+}
+
+/* Punctuation */
+/* Comment.Multiline */
+/* Comment.Preproc */
+/* Comment.Single */
+/* Comment.Special */
+/* Generic.Emph */
+/* Generic.Strong */
+/* Keyword.Constant */
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #f92672
+}
+
+/* Keyword.Namespace */
+/* Keyword.Pseudo */
+/* Keyword.Reserved */
+/* Keyword.Type */
+/* Literal.Date */
+/* Literal.Number */
+.highlight .s {
+  color: #e6db74
+}
+
+/* Literal.String */
+/* Name.Attribute */
+.highlight .nb {
+  color: #f8f8f2
+}
+
+/* Name.Builtin */
+/* Name.Class */
+/* Name.Constant */
+/* Name.Decorator */
+/* Name.Entity */
+/* Name.Exception */
+/* Name.Function */
+/* Name.Label */
+.highlight .nn {
+  color: #f8f8f2
+}
+
+/* Name.Namespace */
+/* Name.Other */
+/* Name.Property */
+/* Name.Tag */
+/* Name.Variable */
+.highlight .ow {
+  color: #f92672
+}
+
+/* Operator.Word */
+/* Text.Whitespace */
+/* Literal.Number.Float */
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #ae81ff
+}
+
+/* Literal.Number.Integer */
+/* Literal.Number.Oct */
+/* Literal.String.Backtick */
+/* Literal.String.Char */
+/* Literal.String.Doc */
+/* Literal.String.Double */
+.highlight .se {
+  color: #ae81ff
+}
+
+/* Literal.String.Escape */
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #e6db74
+}
+
+/* Literal.String.Interpol */
+/* Literal.String.Other */
+/* Literal.String.Regex */
+/* Literal.String.Single */
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #f8f8f2
+}
+
+/* Name.Builtin.Pseudo */
+/* Name.Variable.Class */
+/* Name.Variable.Global */
+/* Name.Variable.Instance */
+/* Literal.Number.Integer.Long */
+/* Generic Heading & Diff Header */
+/* Generic.Subheading & Diff Unified/Comment? */
+/* Generic.Deleted & Diff Deleted */
+/* Generic.Inserted & Diff Inserted */

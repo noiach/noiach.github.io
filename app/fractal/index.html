@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<!-- Made in Python, HTML and CSS. JS libraries/addons used: Kinetic.js
+-->
+<html lang='en'>
+
+<head>
+
+  <!--============================= META-DATA =============================-->
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="A graphical tool for creating IFS Fractals" />
+  <meta name="keywords" content="Australia, IFS, Fractals, Iterated, Function, System, Maths" />
+  <title>IFS Fractals</title>
+  <link rel="icon" type="image/png" href="/img/code.png" />
+
+  <!--=====================================================================-->
+
+  <link rel='stylesheet' type='text/css' href='main.css' />
+
+</head>
+
+<body>
+
+  <!--================================ HEADER ================================-->
+  <div id='top'>
+
+
+    <!--=====================================================================-->
+  </div>
+
+
+
+  <!--============================== FRONT ===============================-->
+  <div id='middle'>
+
+    <div class='center'>
+      <div id='title' class='inline'>
+        <a>
+          <h1>IFS Fractals</h1>
+        </a>
+      </div>
+
+      <!--<div id='nav' class='inline'><ul>
+            <li><a href='/run/blog'>Blog</a></li>
+            <li><a href='/run/blog?m=tags'>Tags</a></li>
+            <li><a href='/run/blog?m=list'>Post Listing</a></li>
+        </ul></div>-->
+    </div>
+
+
+    <!-- HERE -->
+    <!-- REST -->
+    <script src="matrix.js"></script>
+    <script src="kinetic.js"></script>
+    <div class='center'>
+      <div class='outer' id='left'>
+        <div id="container" style='background-color: #aaaaaa; height:480px; width: 480px;border: 2px solid black'></div>
+
+      </div>
+      <div class='outer' id='right'>
+        <canvas id="canvas" style='border: 2px solid black; '></canvas>
+      </div>
+    </div>
+
+    <div class='center'>
+      <div class='outer' style='text-align:left; width: 200px;'>
+        <p id='loads' style='height:15px; margin-top: 10px;'></p>
+        <h4>Template Settings</h4>
+        <form style='margin-top: 20px; '>Select tool
+          <br />
+          <select id="tool-menu">
+            <option value='scale'>Scale</option>
+            <option value='shear'>Shear</option>
+            <option value='rotate'>Rotate</option>
+          </select>
+        </form>
+        <br />
+        <button onclick="deleter()">[Delete] Last Square</button>
+        <br />
+        <br /> Live Preview
+        <input type="checkbox" id="liveP" checked>
+        <br />
+        <br /> Template Zoom %
+        <br />
+        <input type="text" id="tzoom" value="80" onchange="templ(ifs)">
+        <br />
+      </div>
+      <div class='outer' style='text-align:left'>
+        <h4>Render Settings</h4>
+        <button onclick="rend()">Render Preview</button>
+        <br />
+        <br />
+        <button onclick="savePng()">Save as PNG</button>
+        <br />
+        <br /> Number of points
+        <br />
+        <input type="text" id="np" value='60000' onchange="rend()">
+        <br>
+        <br /> Render Zoom %
+        <br />
+        <input type="text" id="rzoom" value="70" onchange="rend()">
+        <br />
+      </div>
+      <div clas=='outer'>
+        <br /> Note: Shearing and scaling don't account for rotation yet, so using the rotation tool currently makes
+        using the
+        other two tools harder.
+      </div>
+    </div>
+    <script src="template.js"></script>
+    <script src="canv.js"></script>
+
+    <!--=====================================================================-->
+  </div>
+
+
+
+  <!--================================ FOLIO ==============================-->
+  <div id='folio'>
+
+
+    <div class='center'>
+      <h3>Fractal Gallery</h3>
+
+      <article class='blog outer' style='text-align: left; width: 320px; margin-top:30px; margin-bottom:10px;'>
+        <div class='post-panel'>
+          <a href='#' onclick="templ(fernIfs);">
+            <h2>Fern</h2>
+          </a>
+          <div class='date'> &ensp;&ensp; Tags:
+            <span class='tag'>
+              <a href='#'>Nature</a>
+            </span>
+          </div>
+          <div class='center'>
+            <a href='#' onclick="templ(fernIfs);">
+              <img src='img/fern.png' style='margin: 0 0 0 0px;' />
+            </a>
+          </div>
+        </div>
+        <div class='post-shadow'></div>
+      </article>
+
+      <article class='blog outer' style='text-align: left; width: 320px; margin-top:10px; margin-bottom:10px;'>
+        <div class='post-panel'>
+          <a href='#' onclick="templ(pinksiIfs);">
+            <h2>Sierpinski triangle</h2>
+          </a>
+          <div class='date'> &ensp;&ensp; Tags:
+            <span class='tag'>
+              <a href='#'>Geometric</a>
+            </span>
+          </div>
+          <div class='center'>
+            <a href='#' onclick="templ(pinksiIfs);">
+              <img src='img/pinksi.png' style='margin: 0px;' />
+            </a>
+          </div>
+        </div>
+        <div class='post-shadow'></div>
+      </article>
+
+      <article class='blog outer' style='text-align: left; width: 320px; margin-top:10px; margin-bottom:10px;'>
+        <div class='post-panel'>
+          <a href='#' onclick="templ(dragonIfs);">
+            <h2>Dragon</h2>
+          </a>
+          <div class='date'> &ensp;&ensp; Tags:
+            <span class='tag'>
+              <a href='#'>Spiral</a>
+            </span>
+          </div>
+          <div class='center'>
+            <a href='#' onclick="templ(dragonIfs);">
+              <img src='img/dragon.png' style='margin: 0px;' />
+            </a>
+          </div>
+        </div>
+        <div class='post-shadow'></div>
+      </article>
+
+      <article class='blog outer' style='text-align: left; width: 320px; margin-top:10px; margin-bottom:10px;'>
+        <div class='post-panel'>
+          <a href='#' onclick="templ(pineIfs);">
+            <h2>Pine Tree</h2>
+          </a>
+          <div class='date'> &ensp;&ensp; Tags:
+            <span class='tag'>
+              <a href='#'>Nature</a>
+            </span>
+          </div>
+          <div class='center'>
+            <a href='#' onclick="templ(pineIfs);">
+              <img src='img/pine.png' style='margin: 0px;' />
+            </a>
+          </div>
+        </div>
+        <div class='post-shadow'></div>
+      </article>
+
+      <article class='blog outer' style='text-align: left; width: 320px; margin-top:10px; margin-bottom:10px;'>
+        <div class='post-panel'>
+          <a href='#' onclick="templ(algaeIfs);">
+            <h2>Algae</h2>
+          </a>
+          <div class='date'> &ensp;&ensp; Tags:
+            <span class='tag'>
+              <a href='#'>Nature</a>
+            </span>
+          </div>
+          <div class='center'>
+            <a href='#' onclick="templ(algaeIfs);">
+              <img src='img/algae.png' style='margin: 0px;' />
+            </a>
+          </div>
+        </div>
+        <div class='post-shadow'></div>
+      </article>
+
+      <article class='blog outer' style='text-align: left; width: 320px; margin-top:10px; margin-bottom:10px;'>
+        <div class='post-panel'>
+          <a href='#' onclick="templ(kochIfs);">
+            <h2>Koch</h2>
+          </a>
+          <div class='date'> &ensp;&ensp; Tags:
+            <span class='tag'>
+              <a href='#'>Geometric</a>
+            </span>
+          </div>
+          <div class='center'>
+            <a href='#' onclick="templ(kochIfs);">
+              <img src='img/koch.png' style='margin: 0px;' />
+            </a>
+          </div>
+        </div>
+        <div class='post-shadow'></div>
+      </article>
+
+      <article class='blog outer' style='text-align: left; width: 320px; margin-top:10px; margin-bottom:10px;'>
+        <div class='post-panel'>
+          <a href='#' onclick="templ(treeIfs);">
+            <h2>Tree</h2>
+          </a>
+          <div class='date'> &ensp;&ensp; Tags:
+            <span class='tag'>
+              <a href='#'>Nature</a>
+            </span>
+          </div>
+          <div class='center'>
+            <a href='#' onclick="templ(treeIfs);">
+              <img src='img/tree.png' style='margin: 0px;' />
+            </a>
+          </div>
+        </div>
+        <div class='post-shadow'></div>
+      </article>
+
+      <article class='blog outer' style='text-align: left; width: 320px; margin-top:10px; margin-bottom:10px;'>
+        <div class='post-panel'>
+          <a href='#' onclick="templ(pentIfs);">
+            <h2>Pentagon</h2>
+          </a>
+          <div class='date'> &ensp;&ensp; Tags:
+            <span class='tag'>
+              <a href='#'>Geometric</a>
+            </span>
+          </div>
+          <div class='center'>
+            <a href='#' onclick="templ(pentIfs);">
+              <img src='img/pent.png' style='margin: 0px;' />
+            </a>
+          </div>
+        </div>
+        <div class='post-shadow'></div>
+      </article>
+
+
+
+    </div>
+
+
+    <!--=====================================================================-->
+  </div>
+
+
+
+  <!--============================== BOTTOM  ==============================-->
+  <div id='bottom'>
+
+
+    <!--=====================================================================-->
+  </div>
+
+
+
+
+</body>
+
+</html>
