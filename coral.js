@@ -270,7 +270,7 @@ var runner = function () {
 }
 
 var options = {
-    canvasId: 'myCanvas',
+    canvasId: 'canvasWithID',
     pixel: 3,
     colors: 3,
     density: 30,

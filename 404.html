@@ -2,32 +2,38 @@
 <html lang="en">
 
 <head>
-  <link rel="canonical" href="/404">
-  <title>404</title>
+  <!-- Force HTTPS -->
+  <script> // Don't force http when serving the website locally
+    if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.protocol != "https:")) window.location.protocol = "https";
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="noiach">
+  <meta name="author" content="noiach">
+  <meta name="keywords" content="noiach">
+  <link rel="canonical" href="/">
+  <title>404 - noiach</title>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/index.css">
 </head>
 
-<body>
-  <style>
-    html,
-    body {
-      margin: 0px;
-      padding: 0px;
-      background: black;
-    }
-
-    #myCanvas {
-      margin-left: -2px;
-      margin-top: -2px;
-    }
-  </style>
-
-  <canvas id="myCanvas"></canvas>
-
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="151" class="no-scroll">
+  <canvas id="canvasWithID"></canvas>
+  <div class="corner">
+    <p class="color-0 italic">
+      <a href="https://noiach.com" class="color-0">noiach.com</a>
+      (<a href="https://noiach.com/404.html" class="color-0 italic">404</a>)
+    </p>
+    <p class="color-1">
+      <a href="https://github.com/noiach" class="color-1">GitHub</a>
+    </p>
+    <p class="color-2">
+      <a href="./app/XScreenSaver.js/" class="color-2">XScreenSaver.js</a>
+    </p>
+  </div>
   <script src="/404.js"></script>
   <script src="./coral.js"></script>
-
-
 </body>
 
 </html>

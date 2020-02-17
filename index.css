@@ -1,0 +1,44 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #000;
+}
+
+#canvasWithID {
+    margin-left: -2px;
+    margin-top: -2px;
+}
+
+#page-top {
+    overflow: hidden;
+}
+
+.corner {
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    padding: 10px 30px;
+    min-width: 300px;
+}
+
+.corner a {
+    font-family: monospace;
+    font-weight: 900;
+    /* color: #FCBB6D; */
+    border-width: 0px;
+    text-decoration: none;
+    cursor: pointer;
+    border-style: solid;
+}
+
+
+.corner a:hover {
+    /* border-bottom: 1px solid #FCBB6D; */
+    border-bottom-width: 1px;
+}
+
+.italic {
+    font-style: italic;
+}

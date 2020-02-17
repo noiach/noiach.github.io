@@ -2,86 +2,38 @@
 <html lang="en">
 
 <head>
-  <!-- Force HTTPS -->
-  <script>
-    // Don't force http when serving the website locally
-    if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.protocol != "https:"))
-      window.location.protocol = "https";
-  </script>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="noiach">
-  <meta name="author" content="noiach">
-  <meta name="keywords" content="noiach">
-  <link rel="canonical" href="/">
-  <title>noiach</title>
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Force HTTPS -->
+    <script> // Don't force http when serving the website locally
+        if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.protocol != "https:")) window.location.protocol = "https";
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="noiach">
+    <meta name="author" content="noiach">
+    <meta name="keywords" content="noiach">
+    <link rel="canonical" href="/">
+    <title>noiach</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/index.css">
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="151" class="no-scroll">
-
-  <style>
-    html,
-    body {
-      margin: 0px;
-      padding: 0px;
-      background-color: #000;
-    }
-
-    #myCanvas {
-      margin-left: -2px;
-      margin-top: -2px;
-    }
-
-    #page-top {
-      overflow: hidden;
-    }
-
-    .corner {
-      background: rgba(0, 0, 0, 0.75);
-      position: fixed;
-      top: 30px;
-      left: 30px;
-      padding: 10px 30px;
-      min-width: 300px;
-    }
-
-    .corner a {
-      font-family: monospace;
-      font-weight: 900;
-      /* color: #FCBB6D; */
-      border-width: 0px;
-      text-decoration: none;
-      cursor: pointer;
-      border-style: solid;
-    }
-
-
-    .corner a:hover {
-      /* border-bottom: 1px solid #FCBB6D; */
-      border-bottom-width: 1px;
-    }
-
-    .italic {
-      font-style: italic;
-    }
-  </style>
-
-  <canvas id="myCanvas"></canvas>
-
-  <div class="corner">
-    <p><a href="https://noiach.com" target="_blank" rel="noopener noreferrer" class="color-0 italic">noiach.com</a></p>
-    <p><a href="https://github.com/noiach" target="_blank" rel="noopener noreferrer" class="color-1">GitHub</a></p>
-    <p><a href="./app/XScreenSaver.js/" target="_blank" rel="noopener noreferrer" class="color-2">XScreenSaver.js</a>
-    </p>
-  </div>
-
-  <script src="/hi.js"></script>
-  <script src="./coral.js"></script>
-
+    <canvas id="canvasWithID"></canvas>
+    <div class="corner">
+        <p class="color-0 italic">
+            <a href="https://noiach.com" class="color-0">noiach.com</a>
+            (<a href="https://noiach.com/404.html" class="color-0 italic">404</a>)
+        </p>
+        <p class="color-1">
+            <a href="https://github.com/noiach" class="color-1">GitHub</a>
+        </p>
+        <p class="color-2">
+            <a href="./app/XScreenSaver.js/" class="color-2">XScreenSaver.js</a>
+        </p>
+    </div>
+    <script src="/hi.js"></script>
+    <script src="./coral.js"></script>
 </body>
 
 </html>
