@@ -1,5 +1,5 @@
 // Simulates coral growth
-// Code re-implemented from C to Javascript by noiach, 2017
+// Code re-implemented from C to Javascript, 2017
 // Original license:
 
 /* coral, by "Frederick G.M. Roeber" <roeber@netscape.com>, 15-jul-97.
